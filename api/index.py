@@ -5,7 +5,7 @@ import pymysql.cursors
 
 app = FastAPI(docs_url="/api/py/docs", openapi_url="/api/py/openapi.json")
 
-@app.get("/clientes")
+@app.get("/api/py/clientes")
 async def get_costumer(stablishment_name: str = ""):
     connection = pymysql.connect(
         host="db1.rizer.com.br",
